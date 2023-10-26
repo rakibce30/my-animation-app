@@ -1,13 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
-import { headingVariants } from '../animate'
+import { downToUp } from '../animate'
 
 
 const Heading = ({title, description, className}) => {
 
     return (
         <motion.div
-            variants={headingVariants}
+            variants={downToUp}
             initial='hidden'
             whileInView='visible'
             viewport={{once: true}}

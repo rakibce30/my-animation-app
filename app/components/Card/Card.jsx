@@ -2,9 +2,9 @@ import Image from 'next/image'
 import React from 'react'
 import { HiOutlineChat, HiOutlineHeart, HiOutlineDownload } from "react-icons/hi";
 
-const Card = ({className, img}) => {
+const Card = ({img}) => {
     return (
-        <div className={`${className} bg-white absolute left-1/2 -translate-x-1/2 my-6 p-4 ring-2 rounded-3xl ring-gray-200 shadow-xl`}>
+        <div className={`bg-white my-6 p-4 ring-2 rounded-3xl ring-gray-200 shadow-xl`}>
             <div className='flex gap-4 items-center'>
                 <Image className='w-12 rounded-full' src='/asset/john-doe.jpeg' alt='Auth' width={1000} height={1000} />
                 <div>

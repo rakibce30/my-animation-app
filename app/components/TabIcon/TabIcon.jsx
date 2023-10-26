@@ -1,12 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
 import { HiOutlineChartPie, HiOutlineCamera, HiOutlineChip, HiOutlineClipboardList, HiOutlineCog, HiOutlineLibrary } from "react-icons/hi";
-import { headingVariants } from "../animate";
+import { downToUp } from "../animate";
 
 const TabIcon = () => {
     return (
         <motion.div
-            variants={headingVariants}
+            variants={downToUp}
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true }}

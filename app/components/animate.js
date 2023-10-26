@@ -1,4 +1,4 @@
-export const bannerTextVariants = {
+export const upToDown = {
     hidden: {
         opacity: 0,
         y: '-40px',
@@ -14,15 +14,47 @@ export const bannerTextVariants = {
     }
 }
 
+export const downToUp = {
+    hidden: {
+        opacity: 0,
+        y: '60px',
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1.50,
+            delay: 0.3,
+            ease: 'easeInOut',
+        }
+    }
+}
+
+export const fadeIn = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 1.5,
+            delay: 0.5,
+            ease: 'easeIn',
+        }
+    }
+}
+
 export const bannerBgVariants = {
     hidden: {
         x: 0,
         z: 0,
-        skewX: '-4deg'
+        skewX: '-4deg',
+        opacity: 0,
     },
     visible: {
         x: '60px',
         z: '-25px',
+        opacity: 1,
         skewX: 0,
         transition: {
             duration: 2.80,
@@ -38,34 +70,20 @@ export const bannerImgVariants = {
         y: 0,
         rotate: 0,
         scale: 0.8,
-        skewX: '-4deg'
+        skewX: '-4deg',
+        opacity: 0,
     },
     visible: {
         scale: 1.1,
         y: '70px',
         rotate: '2deg',
         rotateX: '6deg',
+        opacity: 1,
         transition: {
             duration: 2.80,
             delay: 0.3,
             ease: 'easeInOut',
             type:'spring',
-        }
-    }
-}
-
-export const headingVariants = {
-    hidden: {
-        opacity: 0,
-        y: '80px',
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 1.50,
-            delay: 0.3,
-            ease: 'easeInOut',
         }
     }
 }
@@ -84,3 +102,6 @@ export const carouselVariants = {
         }
     }
 }
+
+
+

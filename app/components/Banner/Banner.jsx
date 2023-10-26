@@ -3,7 +3,8 @@ import React from 'react'
 import Text from '../Text/Text'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { bannerBgVariants, bannerImgVariants, bannerTextVariants } from '../animate'
+import { bannerBgVariants, bannerImgVariants, upToDown } from '../animate'
+import HeroButton from '../HeroButton/HeroButton'
 
 
 
@@ -11,13 +12,13 @@ const Banner = () => {
     return (
         <div className='flex flex-col lg:flex-row gap-8 items-center justify-between mt-16'>
             <motion.div
-                variants={bannerTextVariants}
+                variants={upToDown}
                 initial='hidden'
                 animate='visible'
                 className='w-full lg:w-2/5'>
                 <h2 className='text-5xl font-bold mb-3 lg:leading-[58px]'>Create <Text>beautiful</Text>, shareable screenshots with ease.</h2>
                 <p className='text-gray-600 mb-4 text-lg'>Wrap is a powerful tool for brands to design and edit images for social media, product development, presentations, and much more.</p>
-                <button className='ring ring-gray-200 px-3 py-2.5 rounded-xl'><Text className='text-xl font-semibold'>Get Started Fee</Text></button>
+                <HeroButton text='Stay with us'/>
                 <p className='text-gray-600 mt-4 text-lg'>Join and thousands more that love Wrap.</p>
             </motion.div>
             <div className='w-full lg:w-3/5 relative'>
