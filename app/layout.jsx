@@ -1,9 +1,14 @@
-import { Inter } from 'next/font/google'
+import { Inter, Montserrat, Ubuntu } from 'next/font/google'
 import './globals.css'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const montserrat = Ubuntu({
+  weight: ['400', '500', '700',],
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <Header></Header>
         <main>{children}</main>
         <Footer></Footer>

@@ -1,10 +1,20 @@
+'use client'
+import { motion } from 'framer-motion'
+import { headingVariants } from '../animate'
 
-const Heading = () => {
+
+const Heading = ({title, description, className}) => {
+
     return (
-        <div className="max-w-3xl mx-auto mt-52 text-center">
-            <h1 className=" font-bold text-5xl mb-4">Simple, curated styles that always work</h1>
-            <p className="text-xl text-gray-600">Choose from carefully selected styles to create pixel-perfect designs in seconds—even if you're not a designer.</p>
-        </div>
+        <motion.div
+            variants={headingVariants}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{once: true}}
+            className={`max-w-3xl mx-auto text-center ${className}`}>
+            <h1 className=" font-bold text-5xl mb-4">{title}</h1>
+            <p className="text-xl text-gray-600">{description}</p>
+        </motion.div>
     )
 }
 
