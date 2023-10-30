@@ -96,11 +96,23 @@ export const carouselVariants = {
         x: '-98%',
         transition: {
             duration: 100,
-            delay: 0.5,
+            delay: 0.8,
             ease: 'linear',
             repeat: Infinity
         }
     }
+}
+
+export const heroBtnVariants = {
+    hover: {
+        backgroundImage: 'linear-gradient(to right, indigo, purple, pink)',
+        transition: {
+            duration: 0.8,
+            delay: 0.2,
+            ease: 'easeInOut'
+        }
+    }
+
 }
 
 

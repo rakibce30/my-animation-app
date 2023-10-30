@@ -37,7 +37,7 @@ const Header = () => {
         <div className='flex flex-row items-center justify-between'>
           <h2 className='text-4xl font-bold'><Text>Animate</Text></h2>
           <div className='flex gap-6 items-center'>
-            <Link href='/' className='text-lg text-gray-500'>Log in</Link>
+            <Link href='/login' className='text-lg text-gray-500'>Log in</Link>
             <HeroButton text='Get Started Free'/>
           </div>
         </div>

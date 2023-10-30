@@ -1,11 +1,19 @@
-import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Text from '../Text/Text'
+import { heroBtnVariants } from '../animate'
 
-const HeroButton = ({text}) => {
+const HeroButton = ({ text }) => {
   return (
-    <div>
-        <button className='ring-1 ring-gray-200 px-3 py-2.5 rounded-xl'><Text className='text-xl font-semibold'>{text}</Text></button>
-    </div>
+    <AnimatePresence>
+
+
+      <motion.div
+        whileHover='hover'
+        variants={heroBtnVariants}
+        className='bg-gray-300 rounded-2xl w-fit p-[2px]'>
+        <button className='bg-white px-3 py-3 rounded-[14px]'><Text className='text-xl font-semibold'>{text}</Text></button>
+      </motion.div>
+    </AnimatePresence>
   )
 }
 
